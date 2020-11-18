@@ -131,6 +131,8 @@ var hh = ("0"+date.getHours()).slice(-2);
 var m =("0"+date.getMinutes()).slice(-2);
 document.querySelector(".return_time").value=`${yyyy}-${mm}-${dd}T${hh}:${mm}`
 
+var register_button = document.querySelector('.register_button');
+var return_button = document.querySelector('.return_button');
 //借りているものがあるかチェック
 var register_name = document.querySelector('.register_name');
 register_name.addEventListener('keyup',search_Name);
@@ -150,7 +152,16 @@ function search_Name(){
         document.querySelector(`.key_number_${e.no}`).style.backgroundColor = " red";
       }
     }
-    
   });
+  if(name!==""){
+    register_button.removeAttribute("disabled");
+    return_button.removeAttribute("disabled");
+  }
+  if(name===""){
+    register_button.setAttribute("disabled", "disabled");
+    return_button.setAttribute("disabled", "disabled");
+  }
 }
 
+register_button.setAttribute("disabled", "disabled");
+return_button.setAttribute("disabled", "disabled");
