@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="key_outer_box">
+      <div class="key_box">
+        <div class="key_1"><p class="key_number_1 key">1</p></div>
+        <div class="key_2"><p class="key_number_2 key">2</p></div>
+        <div class="key_3"><p class="key_number_3 key">3</p></div>
+      </div>
+      <div class="key_box">
+        <div class="key_4"><p class="key_number_4 key">4</p></div>
+        <div class="key_5"><p class="key_number_5 key">5</p></div>
+        <div class="key_6"><p class="key_number_6 key">6</p></div>
+      </div>
+    </div>
+    <input type="text" class="register_name">
+    <input type="datetime-local" class="return_time">
+    <input type="button" value="登録" class="register_button" >
+    <input type="button" value="返却" class="return_button" >
+    <div class="list">
+      <div>鍵貸し出し状況</div>
+      <div class="list-item"></div>
+      
+      <div>鍵返却状況</div>
+      <div class="return-list"></div>
+        
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
+
+<style>
+  .key_outer_box {
+    width: 300px;
+    height: 300px;
+  }
+
+  .key_box{
+    width: 300px;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .key{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    text-align: left;
+    background-color: #ffa300;
+    font-size: 16px;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 24px;
+    border-radius: 4px;
+    border-bottom: 4px solid #d37800;
+  }
+
+  .key:active{    
+    transform: translateY(4px);
+    border-bottom: none;
+  }
+
+  .white{
+      background-color: white;
+  }
+
+  .list-item{
+    display:flex;
+  }
+
+</style>
